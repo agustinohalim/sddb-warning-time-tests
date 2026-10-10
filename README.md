@@ -6,7 +6,7 @@ Code for the paper
 
 > Halim, A., Lukman, A., Andika, R., Macnamara, B.D., & Erwin. **Between-database horizon tests do not
 > establish warning times in HRV-based prediction of sudden cardiac death.** Manuscript submitted to
-> *Computers in Biology and Medicine*.
+> *Biomedical Signal Processing and Control*.
 
 Cite this code as: Halim, A. (2026). *sddb-warning-time-tests* (version 1.0.0). Zenodo.
 https://doi.org/10.5281/zenodo.23283431
