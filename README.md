@@ -1,10 +1,15 @@
 # sddb-warning-time-tests
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23283430.svg)](https://doi.org/10.5281/zenodo.23283430)
+
 Code for the paper
 
 > Halim, A., Lukman, A., Andika, R., Macnamara, B.D., & Erwin. **Between-database horizon tests do not
 > establish warning times in HRV-based prediction of sudden cardiac death.** Manuscript submitted to
 > *Computers in Biology and Medicine*.
+
+Cite this code as: Halim, A. (2026). *sddb-warning-time-tests* (version 1.0.0). Zenodo.
+https://doi.org/10.5281/zenodo.23283431
 
 Studies report that heart rate variability (HRV) from the MIT-BIH Sudden Cardiac Death Holter
 Database (sddb) predicts sudden cardiac death minutes to hours before ventricular fibrillation (VF),
