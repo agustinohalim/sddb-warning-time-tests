@@ -1,0 +1,11 @@
+
+== Selisih dan rasio daya dalam-pasien (12) terhadap horizon (12), bootstrap berpasangan atas simulasi
+  searah_k     1: horizon 0.28 dalam 0.74 | selisih +0.46 [+0.33, +0.59] | rasio 2.6 [1.9, 3.9]
+  searah_k     2: horizon 0.34 dalam 0.98 | selisih +0.64 [+0.54, +0.73] | rasio 2.9 [2.3, 3.9]
+  tegak_k      1: horizon 0.25 dalam 0.92 | selisih +0.67 [+0.58, +0.76] | rasio 3.7 [2.7, 5.6]
+  nadi        10: horizon 0.05 dalam 0.25 | selisih +0.20 [+0.11, +0.29] | rasio 5.0 [2.2, 22.0]
+  nadi        20: horizon 0.12 dalam 0.64 | selisih +0.52 [+0.42, +0.62] | rasio 5.3 [3.5, 10.3]
+  ektopi       2: horizon 0.08 dalam 0.29 | selisih +0.21 [+0.11, +0.31] | rasio 3.6 [1.9, 10.0]
+  ektopi       4: horizon 0.10 dalam 0.63 | selisih +0.53 [+0.42, +0.64] | rasio 6.3 [3.8, 14.8]
+  ektopi     0.5: horizon 0.05 dalam 0.13 | selisih +0.08 [+0.00, +0.16] | rasio 2.6 [1.0, 11.0]
+  ektopi    0.25: horizon 0.04 dalam 0.12 | selisih +0.08 [+0.00, +0.16] | rasio 3.0 [1.0, 14.0]

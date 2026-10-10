@@ -1,0 +1,4 @@
+
+== Kontrol pergeseran waktu: blok 30 menit berakhir >= 150 menit sebelum VF sebagai "dekat palsu"
+  logistik AUC blok palsu rerata 0.501 [0.406, 0.600], maks 0.616; pasien per undian ~14; median selisih skor +0.006; 16 dtk
+  rf       AUC blok palsu rerata 0.489 [0.382, 0.592], maks 0.605; pasien per undian ~14; median selisih skor -0.001; 410 dtk

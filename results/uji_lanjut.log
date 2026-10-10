@@ -1,0 +1,52 @@
+tren logistik lawan nsrdb: n=12/18  AUC 0.90 0.88 0.90 0.85 0.88 0.89  kemiringan -0.000/jam [-0.007, +0.004]  AUC(0)-AUC(6j) +0.009 [-0.014, +0.056]
+tren logistik lawan chfdb: n=12/15  AUC 0.86 0.87 0.90 0.80 0.76 0.81  kemiringan -0.014/jam [-0.035, +0.002]  AUC(0)-AUC(6j) +0.044 [-0.067, +0.161]
+tren rf lawan nsrdb: n=12/18  AUC 1.00 0.93 0.89 0.89 0.93 0.89  kemiringan -0.010/jam [-0.027, +0.001]  AUC(0)-AUC(6j) +0.106 [+0.000, +0.273]
+tren rf lawan chfdb: n=12/15  AUC 0.87 0.84 0.92 0.84 0.76 0.86  kemiringan -0.007/jam [-0.029, +0.013]  AUC(0)-AUC(6j) +0.011 [-0.078, +0.122]
+palsu logistik undian  0  lawan nsrdb 0.933  lawan chfdb 0.874
+palsu logistik undian  1  lawan nsrdb 0.947  lawan chfdb 0.821
+palsu logistik undian  2  lawan nsrdb 0.924  lawan chfdb 0.814
+palsu logistik undian  3  lawan nsrdb 0.915  lawan chfdb 0.821
+palsu logistik undian  4  lawan nsrdb 0.918  lawan chfdb 0.835
+palsu logistik undian  5  lawan nsrdb 0.889  lawan chfdb 0.832
+palsu logistik undian  6  lawan nsrdb 0.909  lawan chfdb 0.804
+palsu logistik undian  7  lawan nsrdb 0.860  lawan chfdb 0.811
+palsu logistik undian  8  lawan nsrdb 0.909  lawan chfdb 0.807
+palsu logistik undian  9  lawan nsrdb 0.901  lawan chfdb 0.846
+palsu logistik undian 10  lawan nsrdb 0.918  lawan chfdb 0.772
+palsu logistik undian 11  lawan nsrdb 0.912  lawan chfdb 0.856
+palsu logistik undian 12  lawan nsrdb 0.858  lawan chfdb 0.870
+palsu logistik undian 13  lawan nsrdb 0.944  lawan chfdb 0.786
+palsu logistik undian 14  lawan nsrdb 0.939  lawan chfdb 0.818
+palsu logistik undian 15  lawan nsrdb 0.944  lawan chfdb 0.821
+palsu logistik undian 16  lawan nsrdb 0.921  lawan chfdb 0.856
+palsu logistik undian 17  lawan nsrdb 0.929  lawan chfdb 0.741
+palsu logistik undian 18  lawan nsrdb 0.930  lawan chfdb 0.849
+palsu logistik undian 19  lawan nsrdb 0.912  lawan chfdb 0.804
+palsu rf undian  0  lawan nsrdb 0.933  lawan chfdb 0.849
+palsu rf undian  1  lawan nsrdb 0.915  lawan chfdb 0.818
+palsu rf undian  2  lawan nsrdb 0.918  lawan chfdb 0.789
+palsu rf undian  3  lawan nsrdb 0.918  lawan chfdb 0.853
+palsu rf undian  4  lawan nsrdb 0.980  lawan chfdb 0.870
+palsu rf undian  5  lawan nsrdb 0.917  lawan chfdb 0.848
+palsu rf undian  6  lawan nsrdb 0.968  lawan chfdb 0.870
+palsu rf undian  7  lawan nsrdb 0.907  lawan chfdb 0.844
+palsu rf undian  8  lawan nsrdb 0.917  lawan chfdb 0.896
+palsu rf undian  9  lawan nsrdb 0.977  lawan chfdb 0.775
+palsu rf undian 10  lawan nsrdb 0.947  lawan chfdb 0.937
+palsu rf undian 11  lawan nsrdb 0.947  lawan chfdb 0.888
+palsu rf undian 12  lawan nsrdb 0.929  lawan chfdb 0.841
+palsu rf undian 13  lawan nsrdb 0.985  lawan chfdb 0.891
+palsu rf undian 14  lawan nsrdb 0.922  lawan chfdb 0.827
+palsu rf undian 15  lawan nsrdb 0.927  lawan chfdb 0.747
+palsu rf undian 16  lawan nsrdb 0.950  lawan chfdb 0.860
+palsu rf undian 17  lawan nsrdb 0.933  lawan chfdb 0.839
+palsu rf undian 18  lawan nsrdb 0.915  lawan chfdb 0.793
+palsu rf undian 19  lawan nsrdb 0.938  lawan chfdb 0.796
+
+Awitan palsu, 20 undian:
+                    mean    min    max
+model    kontrol                     
+logistik chfdb    0.822  0.741  0.874
+         nsrdb    0.916  0.858  0.947
+rf       chfdb    0.842  0.747  0.937
+         nsrdb    0.937  0.907  0.985

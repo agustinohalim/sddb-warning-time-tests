@@ -1,0 +1,70 @@
+
+== Uji surogat awitan palsu: 19 pasien sama untuk awitan sebenarnya dan palsu
+  logistik lawan nsrdb: sebenarnya 0.965; palsu rerata 0.931 [0.848, 0.997]; selisih +0.033; p peringkat 0.080 (N=99)
+  logistik lawan chfdb: sebenarnya 0.846; palsu rerata 0.772 [0.635, 0.842]; selisih +0.073; p peringkat 0.010 (N=99)
+  rf       lawan nsrdb: sebenarnya 1.000; palsu rerata 0.955 [0.909, 0.997]; selisih +0.045; p peringkat 0.025 (N=39)
+  rf       lawan chfdb: sebenarnya 0.832; palsu rerata 0.812 [0.691, 0.895]; selisih +0.019; p peringkat 0.375 (N=39)
+
+== Pita 10 menit dalam 30 menit terakhir (subjek dengan >= 1 jendela di pita)
+    0- 10 menit logistik n=20  nsrdb 0.964 [0.87, 1.00]   chfdb 0.850 [0.69, 0.98]
+    0- 10 menit rf       n=20  nsrdb 1.000 [1.00, 1.00]   chfdb 0.883 [0.73, 0.99]
+   10- 20 menit logistik n=20  nsrdb 0.961 [0.89, 1.00]   chfdb 0.787 [0.62, 0.93]
+   10- 20 menit rf       n=20  nsrdb 1.000 [1.00, 1.00]   chfdb 0.813 [0.65, 0.96]
+   20- 30 menit logistik n=20  nsrdb 0.950 [0.83, 1.00]   chfdb 0.780 [0.60, 0.92]
+   20- 30 menit rf       n=20  nsrdb 0.997 [0.98, 1.00]   chfdb 0.817 [0.66, 0.95]
+   30- 60 menit logistik n=20  nsrdb 0.958 [0.86, 1.00]   chfdb 0.850 [0.70, 0.97]
+   30- 60 menit rf       n=20  nsrdb 0.972 [0.91, 1.00]   chfdb 0.887 [0.76, 0.98]
+  120-150 menit logistik n=19  nsrdb 0.936 [0.82, 1.00]   chfdb 0.782 [0.61, 0.93]
+  120-150 menit rf       n=19  nsrdb 0.956 [0.86, 1.00]   chfdb 0.870 [0.74, 0.98]
+  360-390 menit logistik n=13  nsrdb 0.923 [0.75, 1.00]   chfdb 0.764 [0.56, 0.92]
+  360-390 menit rf       n=13  nsrdb 0.919 [0.75, 1.00]   chfdb 0.851 [0.68, 0.98]
+
+== Dalam-pasien per pita 10 menit lawan jendela >= 120 menit, pasien yang sama
+   0-10 menit logistik AUC 0.541 [0.43, 0.67]  pasien 19, jendela 38/113
+   0-10 menit rf       AUC 0.607 [0.49, 0.72]  pasien 19, jendela 38/113
+  10-20 menit logistik AUC 0.525 [0.39, 0.66]  pasien 19, jendela 38/113
+  10-20 menit rf       AUC 0.573 [0.44, 0.72]  pasien 19, jendela 38/113
+  20-30 menit logistik AUC 0.589 [0.46, 0.72]  pasien 19, jendela 38/113
+  20-30 menit rf       AUC 0.602 [0.48, 0.74]  pasien 19, jendela 38/113
+
+== tanpa VT: jendela tersisa sddb 2416, nsrdb 4608, chfdb 3461
+  logistik h=  0 n=19  lawan nsrdb 0.947 [0.85, 1.00]   lawan chfdb 0.884 [0.75, 0.99]
+  logistik h= 60 n=19  lawan nsrdb 0.968 [0.90, 1.00]   lawan chfdb 0.895 [0.77, 0.99]
+  logistik h=360 n=12  lawan nsrdb 0.917 [0.75, 1.00]   lawan chfdb 0.844 [0.68, 0.97]
+  logistik dalam-pasien (>= 120 menit) semua         AUC 0.577 [0.49, 0.67]  pasien 18
+  logistik dalam-pasien (>= 120 menit) tanpa_ektopik AUC 0.553 [0.45, 0.66]  pasien 18
+  rf       h=  0 n=19  lawan nsrdb 1.000 [1.00, 1.00]   lawan chfdb 0.874 [0.73, 0.99]
+  rf       h= 60 n=19  lawan nsrdb 0.942 [0.82, 1.00]   lawan chfdb 0.930 [0.82, 1.00]
+  rf       h=360 n=12  lawan nsrdb 0.898 [0.71, 1.00]   lawan chfdb 0.839 [0.65, 1.00]
+  rf       dalam-pasien (>= 120 menit) semua         AUC 0.546 [0.44, 0.67]  pasien 18
+  rf       dalam-pasien (>= 120 menit) tanpa_ektopik AUC 0.518 [0.40, 0.64]  pasien 18
+
+== sinus saja (tanpa AF/flutter, pacu, VT): jendela tersisa sddb 1532, nsrdb 4608, chfdb 3233
+  logistik h=  0 n=11  lawan nsrdb 0.924 [0.75, 1.00]   lawan chfdb 0.830 [0.65, 0.97]
+  logistik h= 60 n=13  lawan nsrdb 0.953 [0.85, 1.00]   lawan chfdb 0.913 [0.80, 0.99]
+  logistik h=360 n=10  lawan nsrdb 0.889 [0.67, 1.00]   lawan chfdb 0.840 [0.65, 0.98]
+  logistik dalam-pasien (>= 120 menit) semua         AUC 0.430 [0.29, 0.56]  pasien 10
+  logistik dalam-pasien (>= 120 menit) tanpa_ektopik AUC 0.396 [0.24, 0.52]  pasien 10
+  rf       h=  0 n=11  lawan nsrdb 1.000 [1.00, 1.00]   lawan chfdb 0.752 [0.53, 0.96]
+  rf       h= 60 n=13  lawan nsrdb 0.919 [0.76, 1.00]   lawan chfdb 0.923 [0.81, 1.00]
+  rf       h=360 n=10  lawan nsrdb 0.872 [0.63, 1.00]   lawan chfdb 0.813 [0.55, 1.00]
+  rf       dalam-pasien (>= 120 menit) semua         AUC 0.594 [0.46, 0.72]  pasien 10
+  rf       dalam-pasien (>= 120 menit) tanpa_ektopik AUC 0.600 [0.47, 0.72]  pasien 10
+
+== Dalam-pasien berpasangan: per pasien rerata skor OOF dekat (0-30) minus jauh (>= 120)
+  logistik semua         pasien 19: dekat > jauh pada 11; median selisih +0.003; uji tanda p 0.648; Wilcoxon p 0.441; median AUC per pasien 0.583
+  logistik tanpa_ektopik pasien 19: dekat > jauh pada 11; median selisih +0.010; uji tanda p 0.648; Wilcoxon p 0.651; median AUC per pasien 0.556
+  rf       semua         pasien 19: dekat > jauh pada 13; median selisih +0.096; uji tanda p 0.167; Wilcoxon p 0.036; median AUC per pasien 0.833
+  rf       tanpa_ektopik pasien 19: dekat > jauh pada 13; median selisih +0.070; uji tanda p 0.167; Wilcoxon p 0.014; median AUC per pasien 0.694
+
+== Bootstrap dengan latih ulang, kohort tetap 12 pasien: AUC(0) - AUC(360)
+  logistik lawan nsrdb: AUC per horizon [0.907, 0.866, 0.935, 0.819, 0.926, 0.907]; selisih +0.000 [-0.191, +0.190] (B=200)
+  logistik lawan chfdb: AUC per horizon [0.767, 0.8, 0.861, 0.717, 0.706, 0.756]; selisih +0.011 [-0.178, +0.283] (B=200)
+  rf       lawan nsrdb: AUC per horizon [0.991, 0.907, 0.903, 0.875, 0.912, 0.875]; selisih +0.116 [+0.002, +0.381] (B=60)
+  rf       lawan chfdb: AUC per horizon [0.817, 0.828, 0.906, 0.811, 0.811, 0.767]; selisih +0.050 [-0.148, +0.272] (B=60)
+
+== Simulasi daya: perubahan pra-VF buatan delta x SD, meluruh e^(-t/60), arah sddb - nsrdb
+  delta 0.0 SD: AUC(0)-AUC(360) rerata +0.013; uji horizon menangkap 0/20; uji dalam-pasien menangkap 3/20
+  delta 0.5 SD: AUC(0)-AUC(360) rerata +0.045; uji horizon menangkap 0/20; uji dalam-pasien menangkap 15/20
+  delta 1.0 SD: AUC(0)-AUC(360) rerata +0.071; uji horizon menangkap 0/20; uji dalam-pasien menangkap 20/20
+  delta 2.0 SD: AUC(0)-AUC(360) rerata +0.081; uji horizon menangkap 0/20; uji dalam-pasien menangkap 20/20

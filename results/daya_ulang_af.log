@@ -1,0 +1,24 @@
+== AF/flutter per rekaman sddb (aux_note .ari); PhysioNet: 4 pasien AF
+   30  AF/flutter    32.5 menit dari   1473; jendela pra-VF AF    7/  94  | (N 807, (ST1+ 484, (ST0- 90, (ST0+ 54, (AFIB 33
+   31  AF/flutter    47.8 menit dari    831; jendela pra-VF AF   49/ 163  | (N 277, (ST1- 225, (ST1+ 214, (AFIB 48, (ST0- 45, (ST0+ 21
+   32  AF/flutter    13.5 menit dari   1460; jendela pra-VF AF    0/ 201  | (ST0- 402, (ST1- 24, (AFIB 13, (N 5
+   33  AF/flutter   498.9 menit dari   1473; jendela pra-VF AF   25/  50  | (N 579, (AFIB 499, (ST1+ 250, (ST0- 80, (ST1- 56, (ST0+ 6
+   34  AF/flutter     2.8 menit dari    425; jendela pra-VF AF    0/  79  | (ST0- 181, (ST0+ 169, (N 3, (AFIB 3
+   35  AF/flutter    12.2 menit dari   1492; jendela pra-VF AF  294/ 294  | (ST0- 1050, (ST1+ 420, (AFIB 12, (N 9
+   36  AF/flutter   266.1 menit dari   1221; jendela pra-VF AF  183/ 224  | (ST1- 639, (AFIB 266, (N 158, (ST1+ 157
+   37  AF/flutter    14.3 menit dari   1508; jendela pra-VF AF    1/  16  | (ST1- 766, (N 544, (ST1+ 99, (ST0- 81, (AFIB 14
+   38  AF/flutter   277.9 menit dari   1098; jendela pra-VF AF   21/  96  | (N 350, (AFIB 278, (ST1+ 159, (ST0+ 141, (ST0- 107
+   39  AF/flutter    45.0 menit dari    347; jendela pra-VF AF    6/  55  | (ST1- 248, (AFIB 45, (ST1+ 20, (N 19, (ST0- 7, (ST0+ 4
+   40  AF/flutter    22.8 menit dari   1492; jendela pra-VF AF    0/   0  | (ST0- 631, (ST1- 527, (N 173, (ST0+ 127, (AFIB 23, (ST1+ 1
+   41  AF/flutter    32.4 menit dari    235; jendela pra-VF AF    9/  35  | (N 45, (AFIB 32, (ST1+ 28, (ST0- 3, (ST1- 2
+   42  AF/flutter    12.6 menit dari   1508; jendela pra-VF AF    0/   0  | (ST1- 573, (ST1+ 566, (N 254, (ST0- 102, (AFIB 13
+   43  AF/flutter   142.1 menit dari   1388; jendela pra-VF AF   60/ 187  | (ST1- 823, (N 266, (AFIB 142, (ST0+ 89, (ST0- 22, (ST1+ 1
+   44  AF/flutter   495.3 menit dari   1400; jendela pra-VF AF  103/ 232  | (N 892, (AFIB 495, (ST1+ 12, (ST0+ 0
+   45  AF/flutter    19.7 menit dari   1449; jendela pra-VF AF    0/ 215  | (N 336, (AFIB 20, (ST0- 2, (ST1- 0
+   46  AF/flutter    67.4 menit dari    252; jendela pra-VF AF   17/  36  | (N 73, (AFIB 67
+   47  AF/flutter     5.3 menit dari   1416; jendela pra-VF AF    0/  70  | (ST0- 432, (ST0+ 427, (ST1- 312, (ST1+ 230, (N 6, (AFIB 5
+   48  AF/flutter   137.9 menit dari   1476; jendela pra-VF AF    0/  29  | (ST0- 433, (ST1+ 392, (ST0+ 248, (N 176, (AFIB 138, (ST1- 48
+   49  AF/flutter    36.3 menit dari   1492; jendela pra-VF AF    0/   0  | (ST1+ 705, (ST1- 571, (AFIB 36, (ST0+ 34, (N 25
+   50  AF/flutter   312.6 menit dari   1388; jendela pra-VF AF  137/ 140  | (ST0+ 843, (AFIB 313, (ST1+ 191, (N 40
+   51  AF/flutter     0.0 menit dari   1508; jendela pra-VF AF    0/ 262  | (ST0+ 1417, (ST0- 62, (ST1- 14, (ST1+ 12
+   52  AF/flutter    55.4 menit dari    450; jendela pra-VF AF    9/  30  | (N 188, (ST0- 124, (AFIB 55, (ST1+ 48, (ST0+ 6

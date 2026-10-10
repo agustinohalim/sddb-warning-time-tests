@@ -1,0 +1,15 @@
+
+== Simulasi daya ulang
+  logistik searah    0: selisih rerata +0.015, lebar selang rerata 0.060; horizon terdeteksi 0/100 (aturan lama 0); dalam-pasien 0/100 (median selisih skor -0.003); 0 dtk
+  logistik searah  0.5: selisih rerata +0.045, lebar selang rerata 0.144; horizon terdeteksi 0/50 (aturan lama 0); dalam-pasien 23/50 (median selisih skor +0.059); 340 dtk
+  logistik searah    1: selisih rerata +0.066, lebar selang rerata 0.202; horizon terdeteksi 0/50 (aturan lama 0); dalam-pasien 50/50 (median selisih skor +0.145); 288 dtk
+  logistik searah    2: selisih rerata +0.077, lebar selang rerata 0.230; horizon terdeteksi 0/50 (aturan lama 0); dalam-pasien 50/50 (median selisih skor +0.344); 409 dtk
+  logistik balik   0.5: selisih rerata -0.051, lebar selang rerata 0.157; horizon terdeteksi 0/50 (aturan lama 0); dalam-pasien 0/50 (median selisih skor +0.039); 946 dtk
+  logistik balik     1: selisih rerata -0.223, lebar selang rerata 0.387; horizon terdeteksi 0/50 (aturan lama 0); dalam-pasien 50/50 (median selisih skor +0.136); 384 dtk
+  logistik balik     2: selisih rerata -0.611, lebar selang rerata 0.473; horizon terdeteksi 0/50 (aturan lama 0); dalam-pasien 50/50 (median selisih skor +0.338); 392 dtk
+  logistik tegak   0.5: selisih rerata +0.032, lebar selang rerata 0.106; horizon terdeteksi 0/50 (aturan lama 0); dalam-pasien 50/50 (median selisih skor +0.171); 325 dtk
+  logistik tegak     1: selisih rerata +0.061, lebar selang rerata 0.189; horizon terdeteksi 0/50 (aturan lama 0); dalam-pasien 50/50 (median selisih skor +0.381); 317 dtk
+  logistik tegak     2: selisih rerata +0.076, lebar selang rerata 0.235; horizon terdeteksi 0/50 (aturan lama 0); dalam-pasien 50/50 (median selisih skor +0.614); 348 dtk
+  logistik nadi      5: selisih rerata +0.014, lebar selang rerata 0.052; horizon terdeteksi 0/50 (aturan lama 0); dalam-pasien 0/50 (median selisih skor +0.038); 323 dtk
+  logistik nadi     10: selisih rerata +0.019, lebar selang rerata 0.070; horizon terdeteksi 0/50 (aturan lama 0); dalam-pasien 39/50 (median selisih skor +0.101); 326 dtk
+  logistik nadi     20: selisih rerata +0.034, lebar selang rerata 0.128; horizon terdeteksi 0/50 (aturan lama 0); dalam-pasien 50/50 (median selisih skor +0.239); 317 dtk

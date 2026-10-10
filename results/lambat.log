@@ -1,0 +1,7 @@
+== Peluruhan lambat (tau 180 menit), 12 pasien kohort tetap, kedua uji
+  searah_k     1: 188 dtk
+  searah_k     2: 190 dtk
+  nadi        20: 204 dtk
+  searah_k     1: horizon selisih +0.066 daya 0.25 | dalam-pasien selisih +0.158 daya 0.83
+  searah_k     2: horizon selisih +0.080 daya 0.28 | dalam-pasien selisih +0.358 daya 0.99
+  nadi        20: horizon selisih +0.053 daya 0.24 | dalam-pasien selisih +0.128 daya 0.64

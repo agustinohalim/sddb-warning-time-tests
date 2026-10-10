@@ -1,0 +1,11 @@
+  ... 100 permutasi, 675 dtk
+  ... 200 permutasi, 1342 dtk
+  ... 300 permutasi, 2021 dtk
+  ... 400 permutasi, 2704 dtk
+  ... 500 permutasi, 3517 dtk
+  ... 600 permutasi, 4311 dtk
+  ... 700 permutasi, 5042 dtk
+  ... 800 permutasi, 5985 dtk
+  ... 900 permutasi, 6835 dtk
+
+== Permutasi dalam-pasien RF N = 999: AUC asli 0.608; permutasi rerata 0.502 [0.411, 0.582]; p 0.0100

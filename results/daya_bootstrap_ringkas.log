@@ -1,0 +1,14 @@
+  ektopi    0.25: 46 dtk
+
+== Ringkasan (ambang dari 100 simulasi nol: horizon [-0.186, +0.100], tanpa ektopi [-0.175, +0.198], dalam-pasien > +0.171)
+  nominal di nol: horizon 0.11, horizon tanpa ektopi 0.14, dalam-pasien 0.24
+  nol          0 n=100: horizon sel -0.002 (sd 0.063) disesuaikan 0.06 nominal 0.11 | tanpa ektopi sel +0.023 disesuaikan 0.06 nominal 0.14 | dalam-pasien sel +0.032 disesuaikan 0.05 nominal 0.24
+  searah_k     1 n=100: horizon sel +0.072 (sd 0.079) disesuaikan 0.28 nominal 0.20 | tanpa ektopi sel +0.110 disesuaikan 0.19 nominal 0.44 | dalam-pasien sel +0.178 disesuaikan 0.54 nominal 0.92
+  searah_k     2 n=100: horizon sel +0.094 (sd 0.093) disesuaikan 0.34 nominal 0.26 | tanpa ektopi sel +0.129 disesuaikan 0.25 nominal 0.44 | dalam-pasien sel +0.381 disesuaikan 0.98 nominal 1.00
+  tegak_k      1 n=100: horizon sel +0.062 (sd 0.083) disesuaikan 0.25 nominal 0.17 | tanpa ektopi sel +0.070 disesuaikan 0.15 nominal 0.25 | dalam-pasien sel +0.336 disesuaikan 0.95 nominal 0.98
+  nadi        10 n=100: horizon sel +0.014 (sd 0.060) disesuaikan 0.05 nominal 0.12 | tanpa ektopi sel +0.013 disesuaikan 0.07 nominal 0.22 | dalam-pasien sel +0.118 disesuaikan 0.25 nominal 0.68
+  nadi        20 n=100: horizon sel +0.040 (sd 0.068) disesuaikan 0.12 nominal 0.22 | tanpa ektopi sel +0.049 disesuaikan 0.09 nominal 0.23 | dalam-pasien sel +0.244 disesuaikan 0.78 nominal 0.88
+  ektopi       2 n=100: horizon sel +0.001 (sd 0.067) disesuaikan 0.08 nominal 0.11 | tanpa ektopi sel +0.022 disesuaikan 0.05 nominal 0.18 | dalam-pasien sel +0.104 disesuaikan 0.26 nominal 0.48
+  ektopi       4 n=100: horizon sel +0.002 (sd 0.067) disesuaikan 0.10 nominal 0.12 | tanpa ektopi sel +0.022 disesuaikan 0.05 nominal 0.18 | dalam-pasien sel +0.179 disesuaikan 0.43 nominal 0.83
+  ektopi     0.5 n=100: horizon sel -0.002 (sd 0.061) disesuaikan 0.05 nominal 0.08 | tanpa ektopi sel +0.022 disesuaikan 0.05 nominal 0.18 | dalam-pasien sel +0.007 disesuaikan 0.03 nominal 0.10
+  ektopi    0.25 n=100: horizon sel -0.002 (sd 0.057) disesuaikan 0.04 nominal 0.06 | tanpa ektopi sel +0.022 disesuaikan 0.05 nominal 0.18 | dalam-pasien sel +0.022 disesuaikan 0.03 nominal 0.20

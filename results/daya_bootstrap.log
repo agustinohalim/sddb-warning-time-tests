@@ -1,0 +1,10 @@
+== Simulasi daya kohort bootstrap: horizon 12 pasien, dalam-pasien 19, nsrdb 18
+  nol          0: 839 dtk
+  searah_k     1: 790 dtk
+  searah_k     2: 733 dtk
+  tegak_k      1: 774 dtk
+  nadi        10: 767 dtk
+  nadi        20: 766 dtk
+  ektopi       2: 771 dtk
+  ektopi       4: 780 dtk
+  ektopi     0.5: 800 dtk

@@ -1,0 +1,62 @@
+
+== Kontrol pergeseran waktu sepadan: blok 30 menit (m >= 120) lawan jendela >= m + 120 menit
+  logistik pasien ~15: AUC rerata 0.501 [0.361, 0.626], persentil 95 0.607, maks 0.649; 69 dtk
+  rf       pasien ~15: AUC rerata 0.511 [0.399, 0.632], persentil 95 0.612, maks 0.661; 1718 dtk
+
+== Kuantisasi 128 Hz untuk sddb dan chfdb
+set                    128 Hz   asli  selisih
+model    kontrol h                           
+logistik chfdb    0     0.867  0.867    0.000
+                  60    0.883  0.870    0.013
+                  360   0.772  0.772    0.000
+                  720   0.717  0.717    0.000
+         dalam   -1     0.555  0.552    0.003
+         nsrdb    0     0.969  0.967    0.003
+                  60    0.981  0.978    0.003
+                  360   0.917  0.917    0.000
+                  720   0.924  0.924    0.000
+rf       chfdb    0     0.863  0.863    0.000
+                  60    0.907  0.910   -0.003
+                  360   0.844  0.844    0.000
+                  720   0.742  0.750   -0.008
+         dalam   -1     0.631  0.624    0.007
+         nsrdb    0     1.000  1.000    0.000
+                  60    0.953  0.953    0.000
+                  360   0.917  0.917    0.000
+                  720   1.000  1.000    0.000
+== Dalam-pasien pada 12 pasien kohort tetap, dua sisi: ['30', '31', '32', '34', '35', '36', '38', '43', '44', '45', '50', '51']
+  nol          0: 22 dtk
+  searah_k     1: 22 dtk
+  searah_k     2: 21 dtk
+  tegak_k      1: 23 dtk
+  nadi        10: 22 dtk
+  nadi        20: 22 dtk
+  ektopi       2: 22 dtk
+  ektopi       4: 22 dtk
+  ektopi     0.5: 22 dtk
+  ektopi    0.25: 22 dtk
+
+  sel                horizon-12 dua sisi | dalam-pasien-12 dua sisi | dalam-pasien-19 dua sisi
+  nol          0:   0.06   |   0.06   |   0.06
+  searah_k     1:   0.28   |   0.74   |   0.34
+  searah_k     2:   0.34   |   0.98   |   0.93
+  tegak_k      1:   0.25   |   0.92   |   0.90
+  nadi        10:   0.05   |   0.25   |   0.15
+  nadi        20:   0.12   |   0.64   |   0.66
+  ektopi       2:   0.08   |   0.29   |   0.14
+  ektopi       4:   0.10   |   0.63   |   0.38
+  ektopi     0.5:   0.05   |   0.13   |   0.05
+  ektopi    0.25:   0.04   |   0.12   |   0.06
+
+== Simulasi daya kohort bootstrap, random forest (12 pasien, dua sisi)
+  nol          0: 2564 dtk
+  searah_k     1: 947 dtk
+  searah_k     2: 982 dtk
+  nadi        20: 1184 dtk
+  ektopi       4: 1161 dtk
+  nol: horizon rerata +0.121 (sd 0.089); dalam-pasien rerata +0.002 (sd 0.060)
+  nol          0 n=40: horizon +0.121 daya 0.05 | dalam-pasien +0.002 daya 0.05
+  searah_k     1 n=20: horizon +0.119 daya 0.15 | dalam-pasien +0.146 daya 0.75
+  searah_k     2 n=20: horizon +0.119 daya 0.10 | dalam-pasien +0.265 daya 0.90
+  nadi        20 n=20: horizon +0.117 daya 0.15 | dalam-pasien +0.064 daya 0.30
+  ektopi       4 n=20: horizon +0.115 daya 0.15 | dalam-pasien +0.067 daya 0.30

@@ -1,0 +1,14 @@
+{
+  "title": "sddb-warning-time-tests: power and within-patient tests of HRV-based sudden cardiac death prediction on the MIT-BIH SDDB benchmark",
+  "upload_type": "software",
+  "description": "Code for the paper 'Between-database horizon tests do not establish warning times in HRV-based prediction of sudden cardiac death'. It computes HRV features from PhysioNet beat annotations (sddb, nsrdb, chfdb and the heart failure positive-control databases) and runs the horizon test, diseased controls, surrogate onsets, within-patient contrasts with permutation and drift controls, a power simulation with resampled patients, a replication of a published segment-level design, and the heart failure positive control. PhysioNet data are not included; scripts/00_get_data.py downloads the annotation files.",
+  "creators": [
+    {"name": "Halim, Agustino", "orcid": "0009-0008-4388-1174", "affiliation": "Information Systems and Technology, Universitas OSO, Pontianak, Indonesia"}
+  ],
+  "license": "MIT",
+  "keywords": ["sudden cardiac death", "heart rate variability", "PhysioNet", "benchmark validity", "power analysis", "within-patient design", "reproducibility"],
+  "related_identifiers": [
+    {"identifier": "10.13026/C2W306", "relation": "isDerivedFrom", "resource_type": "dataset", "scheme": "doi"},
+    {"identifier": "https://github.com/agustinohalim/scd-ecg-benchmark-audit", "relation": "references", "resource_type": "software", "scheme": "url"}
+  ]
+}

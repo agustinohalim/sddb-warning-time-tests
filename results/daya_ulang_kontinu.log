@@ -1,0 +1,34 @@
+
+== Simulasi daya ulang
+  logistik searah      0: selisih rerata +0.015, lebar selang rerata 0.060; horizon terdeteksi 0/100 (aturan lama 0); dalam-pasien 0/100 (median selisih skor -0.003); 0 dtk
+  logistik searah    0.5: selisih rerata +0.045, lebar selang rerata 0.144; horizon terdeteksi 0/50 (aturan lama 0); dalam-pasien 23/50 (median selisih skor +0.059); 0 dtk
+  logistik searah      1: selisih rerata +0.066, lebar selang rerata 0.202; horizon terdeteksi 0/50 (aturan lama 0); dalam-pasien 50/50 (median selisih skor +0.145); 0 dtk
+  logistik searah      2: selisih rerata +0.077, lebar selang rerata 0.230; horizon terdeteksi 0/50 (aturan lama 0); dalam-pasien 50/50 (median selisih skor +0.344); 0 dtk
+  logistik balik     0.5: selisih rerata -0.051, lebar selang rerata 0.157; horizon terdeteksi 0/50 (aturan lama 0); dalam-pasien 0/50 (median selisih skor +0.039); 0 dtk
+  logistik balik       1: selisih rerata -0.223, lebar selang rerata 0.387; horizon terdeteksi 0/50 (aturan lama 0); dalam-pasien 50/50 (median selisih skor +0.136); 0 dtk
+  logistik balik       2: selisih rerata -0.611, lebar selang rerata 0.473; horizon terdeteksi 0/50 (aturan lama 0); dalam-pasien 50/50 (median selisih skor +0.338); 0 dtk
+  logistik tegak     0.5: selisih rerata +0.032, lebar selang rerata 0.106; horizon terdeteksi 0/50 (aturan lama 0); dalam-pasien 50/50 (median selisih skor +0.171); 0 dtk
+  logistik tegak       1: selisih rerata +0.061, lebar selang rerata 0.189; horizon terdeteksi 0/50 (aturan lama 0); dalam-pasien 50/50 (median selisih skor +0.381); 0 dtk
+  logistik tegak       2: selisih rerata +0.076, lebar selang rerata 0.235; horizon terdeteksi 0/50 (aturan lama 0); dalam-pasien 50/50 (median selisih skor +0.614); 0 dtk
+  logistik nadi        5: selisih rerata +0.014, lebar selang rerata 0.052; horizon terdeteksi 0/50 (aturan lama 0); dalam-pasien 0/50 (median selisih skor +0.038); 0 dtk
+  logistik nadi       10: selisih rerata +0.019, lebar selang rerata 0.070; horizon terdeteksi 0/50 (aturan lama 0); dalam-pasien 39/50 (median selisih skor +0.101); 0 dtk
+  logistik nadi       20: selisih rerata +0.034, lebar selang rerata 0.128; horizon terdeteksi 0/50 (aturan lama 0); dalam-pasien 50/50 (median selisih skor +0.239); 0 dtk
+  rf       searah      0: selisih rerata +0.093, lebar selang rerata 0.272; horizon terdeteksi 1/10 (aturan lama 0); dalam-pasien 10/10 (median selisih skor +0.081); 0 dtk
+  rf       searah      1: selisih rerata +0.011, lebar selang rerata 0.035; horizon terdeteksi 0/10 (aturan lama 0); dalam-pasien 10/10 (median selisih skor +0.329); 0 dtk
+  rf       searah      2: selisih rerata +0.010, lebar selang rerata 0.035; horizon terdeteksi 0/10 (aturan lama 0); dalam-pasien 10/10 (median selisih skor +0.497); 0 dtk
+  rf       nadi       20: selisih rerata +0.094, lebar selang rerata 0.273; horizon terdeteksi 1/10 (aturan lama 0); dalam-pasien 9/10 (median selisih skor +0.161); 0 dtk
+  logistik searah_k  0.5: selisih rerata +0.042, lebar selang rerata 0.133; horizon terdeteksi 0/50 (aturan lama 0); dalam-pasien 47/50 (median selisih skor +0.071); 306 dtk
+  logistik searah_k    1: selisih rerata +0.062, lebar selang rerata 0.193; horizon terdeteksi 0/50 (aturan lama 0); dalam-pasien 50/50 (median selisih skor +0.180); 314 dtk
+  logistik searah_k    2: selisih rerata +0.075, lebar selang rerata 0.232; horizon terdeteksi 0/50 (aturan lama 0); dalam-pasien 50/50 (median selisih skor +0.409); 306 dtk
+  logistik balik_k   0.5: selisih rerata -0.012, lebar selang rerata 0.072; horizon terdeteksi 0/50 (aturan lama 0); dalam-pasien 31/50 (median selisih skor +0.075); 303 dtk
+  logistik balik_k     1: selisih rerata -0.069, lebar selang rerata 0.212; horizon terdeteksi 0/50 (aturan lama 0); dalam-pasien 50/50 (median selisih skor +0.207); 306 dtk
+  logistik balik_k     2: selisih rerata -0.078, lebar selang rerata 0.318; horizon terdeteksi 0/50 (aturan lama 0); dalam-pasien 50/50 (median selisih skor +0.450); 309 dtk
+  logistik tegak_k   0.5: selisih rerata +0.032, lebar selang rerata 0.107; horizon terdeteksi 0/50 (aturan lama 0); dalam-pasien 50/50 (median selisih skor +0.164); 358 dtk
+  logistik tegak_k     1: selisih rerata +0.059, lebar selang rerata 0.185; horizon terdeteksi 0/50 (aturan lama 0); dalam-pasien 50/50 (median selisih skor +0.379); 337 dtk
+  logistik tegak_k     2: selisih rerata +0.074, lebar selang rerata 0.235; horizon terdeteksi 0/50 (aturan lama 0); dalam-pasien 50/50 (median selisih skor +0.610); 330 dtk
+  rf       searah_k    1: selisih rerata +0.094, lebar selang rerata 0.273; horizon terdeteksi 0/10 (aturan lama 0); dalam-pasien 10/10 (median selisih skor +0.166); 498 dtk
+  rf       searah_k    2: selisih rerata +0.095, lebar selang rerata 0.275; horizon terdeteksi 0/10 (aturan lama 0); dalam-pasien 10/10 (median selisih skor +0.331); 552 dtk
+  rf       balik_k     1: selisih rerata +0.091, lebar selang rerata 0.275; horizon terdeteksi 0/10 (aturan lama 0); dalam-pasien 10/10 (median selisih skor +0.170); 544 dtk
+  rf       balik_k     2: selisih rerata +0.093, lebar selang rerata 0.278; horizon terdeteksi 1/10 (aturan lama 0); dalam-pasien 10/10 (median selisih skor +0.328); 505 dtk
+  rf       tegak_k     1: selisih rerata +0.095, lebar selang rerata 0.275; horizon terdeteksi 1/10 (aturan lama 0); dalam-pasien 10/10 (median selisih skor +0.200); 501 dtk
+  rf       tegak_k     2: selisih rerata +0.095, lebar selang rerata 0.276; horizon terdeteksi 0/10 (aturan lama 0); dalam-pasien 10/10 (median selisih skor +0.385); 580 dtk

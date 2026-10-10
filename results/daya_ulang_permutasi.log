@@ -1,0 +1,7 @@
+
+== Uji permutasi dalam-pasien (dekat 0-30 menit lawan >= 2 jam), label diacak di dalam pasien
+  logistik AUC asli 0.560 (ulangan CV 3); permutasi rerata 0.496 [0.411, 0.571]; p 0.075 (N=199); 36 dtk
+  rf       AUC asli 0.608 (ulangan CV 2); permutasi rerata 0.498 [0.430, 0.566]; p 0.010 (N=99); 697 dtk
+
+== Simulasi daya ulang
+  logistik searah    0: selisih rerata +0.015, lebar selang rerata 0.060; horizon terdeteksi 0/100 (aturan lama 0); dalam-pasien 0/100 (median selisih skor -0.003); 3552 dtk
