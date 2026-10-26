@@ -1,0 +1,72 @@
+
+== Simulasi daya, perubahan dalam SD dalam-rekaman: 12 pasien kohort tetap
+  200/800 simulasi, 201 dtk
+  400/800 simulasi, 126 dtk
+  600/800 simulasi, 39 dtk
+  800/800 simulasi, 39 dtk
+
+== Ringkasan daya (SD dalam-rekaman): ambang dari 1000 simulasi nol b_daya.csv, ukuran pada 500 nol segar; selang 95 % bootstrap nol dan sel bersama (1.000 undian)
+
+  horizon lawan nsrdb [h_nsr]: ambang (-0.181, +0.130); ukuran 0.042
+    searah_w    1 n=200: rerata +0.042, daya 0.09 [0.04, 0.14]
+    searah_w    2 n=200: rerata +0.074, daya 0.20 [0.13, 0.27]
+    searah_w    4 n=200: rerata +0.094, daya 0.25 [0.18, 0.32]
+    tegak_w     2 n=200: rerata +0.060, daya 0.18 [0.12, 0.24]
+
+  horizon lawan chfdb [h_chf]: ambang (-0.128, +0.289); ukuran 0.056
+    searah_w    1 n=200: rerata +0.132, daya 0.11 [0.04, 0.15]
+    searah_w    2 n=200: rerata +0.177, daya 0.17 [0.08, 0.24]
+    searah_w    4 n=200: rerata +0.217, daya 0.24 [0.15, 0.36]
+    tegak_w     2 n=200: rerata +0.108, daya 0.14 [0.08, 0.20]
+
+  horizon berpasangan lawan nsrdb [hp_nsr]: ambang (-0.139, +0.159); ukuran 0.060
+    searah_w    1 n=200: rerata +0.080, daya 0.13 [0.07, 0.20]
+    searah_w    2 n=200: rerata +0.127, daya 0.39 [0.26, 0.49]
+    searah_w    4 n=200: rerata +0.183, daya 0.64 [0.56, 0.74]
+    tegak_w     2 n=200: rerata +0.057, daya 0.10 [0.06, 0.17]
+
+  dalam-pasien AUC jendela [d_auc]: ambang (+0.261, +0.622); ukuran 0.046
+    searah_w    1 n=200: rerata +0.548, daya 0.14 [0.07, 0.26]
+    searah_w    2 n=200: rerata +0.661, daya 0.73 [0.60, 0.84]
+    searah_w    4 n=200: rerata +0.809, daya 0.96 [0.94, 0.99]
+    tegak_w     2 n=200: rerata +0.771, daya 0.90 [0.85, 0.95]
+
+  rasio daya, AUC jendela dalam-pasien terhadap horizon (bootstrap berpasangan, ambang ikut diundi):
+    h_nsr searah_w    1: selisih +0.06 [-0.03, +0.18], rasio 1.7 [0.7, 4.5]
+    h_nsr searah_w    2: selisih +0.54 [+0.39, +0.67], rasio 3.8 [2.6, 5.6]
+    h_nsr searah_w    4: selisih +0.71 [+0.64, +0.78], rasio 3.9 [3.0, 5.1]
+    h_nsr tegak_w     2: selisih +0.72 [+0.65, +0.81], rasio 4.9 [3.7, 7.7]
+    h_chf searah_w    1: selisih +0.03 [-0.04, +0.18], rasio 1.3 [0.7, 3.7]
+    h_chf searah_w    2: selisih +0.57 [+0.42, +0.71], rasio 4.5 [2.8, 9.3]
+    h_chf searah_w    4: selisih +0.72 [+0.59, +0.82], rasio 3.9 [2.6, 6.6]
+    h_chf tegak_w     2: selisih +0.77 [+0.69, +0.84], rasio 6.7 [4.5, 11.0]
+
+== Daya bersyarat uji primer: 15 pasien, random forest, 10 ulangan CV; tiap sel 100 kontras teramati dan 100 undian pergeseran, suntikan sendiri-sendiri
+  200/1501 simulasi, 1062 dtk
+  400/1501 simulasi, 1592 dtk
+  600/1501 simulasi, 1010 dtk
+  800/1501 simulasi, 480 dtk
+  1000/1501 simulasi, 409 dtk
+  1200/1501 simulasi, 403 dtk
+  1400/1501 simulasi, 396 dtk
+  1501/1501 simulasi, 229 dtk
+
+== Ringkasan daya bersyarat uji primer (tolak bila teramati > persentil 95 pergeseran sel yang sama)
+  nol         0: teramati rerata 0.565 (n=1), pergeseran rerata 0.512 persentil 95 0.622 (n=100); daya 0.00 [0.00, 0.00]; p rerata 0.198
+  searah_k  0.5: teramati rerata 0.600 (n=100), pergeseran rerata 0.528 persentil 95 0.607 (n=100); daya 0.35 [0.03, 0.55]; p rerata 0.127
+  searah_k    1: teramati rerata 0.687 (n=100), pergeseran rerata 0.528 persentil 95 0.608 (n=100); daya 1.00 [0.89, 1.00]; p rerata 0.015
+  searah_k    2: teramati rerata 0.812 (n=100), pergeseran rerata 0.529 persentil 95 0.611 (n=100); daya 1.00 [1.00, 1.00]; p rerata 0.010
+  searah_w    2: teramati rerata 0.718 (n=100), pergeseran rerata 0.528 persentil 95 0.607 (n=100); daya 1.00 [0.98, 1.00]; p rerata 0.011
+  searah_w    4: teramati rerata 0.835 (n=100), pergeseran rerata 0.529 persentil 95 0.613 (n=100); daya 1.00 [1.00, 1.00]; p rerata 0.010
+  nadi       10: teramati rerata 0.523 (n=100), pergeseran rerata 0.527 persentil 95 0.603 (n=100); daya 0.00 [0.00, 0.00]; p rerata 0.566
+  nadi       20: teramati rerata 0.600 (n=100), pergeseran rerata 0.527 persentil 95 0.602 (n=100); daya 0.43 [0.13, 0.55]; p rerata 0.175
+
+== Ringkasan daya bersyarat uji primer (tolak bila teramati > persentil 95 pergeseran sel yang sama)
+  nol         0: teramati rerata 0.565 (n=1), pergeseran rerata 0.512 persentil 95 0.622 (n=100); daya 0.00 [0.00, 0.00]; p rerata 0.198
+  searah_k  0.5: teramati rerata 0.600 (n=100), pergeseran rerata 0.528 persentil 95 0.607 (n=100); daya 0.35 [0.03, 0.55]; p rerata 0.127
+  searah_k    1: teramati rerata 0.687 (n=100), pergeseran rerata 0.528 persentil 95 0.608 (n=100); daya 1.00 [0.89, 1.00]; p rerata 0.015
+  searah_k    2: teramati rerata 0.812 (n=100), pergeseran rerata 0.529 persentil 95 0.611 (n=100); daya 1.00 [1.00, 1.00]; p rerata 0.010
+  searah_w    2: teramati rerata 0.718 (n=100), pergeseran rerata 0.528 persentil 95 0.607 (n=100); daya 1.00 [0.98, 1.00]; p rerata 0.011
+  searah_w    4: teramati rerata 0.835 (n=100), pergeseran rerata 0.529 persentil 95 0.613 (n=100); daya 1.00 [1.00, 1.00]; p rerata 0.010
+  nadi       10: teramati rerata 0.523 (n=100), pergeseran rerata 0.527 persentil 95 0.603 (n=100); daya 0.00 [0.00, 0.00]; p rerata 0.566
+  nadi       20: teramati rerata 0.600 (n=100), pergeseran rerata 0.527 persentil 95 0.602 (n=100); daya 0.43 [0.13, 0.55]; p rerata 0.175

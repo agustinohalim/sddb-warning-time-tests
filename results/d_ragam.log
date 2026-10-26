@@ -1,0 +1,15 @@
+== Dekomposisi ragam tiap ciri (semua jendela tiga basis data)
+              sd_gabungan  sd_dalam  rasio   icc
+mean_nn             0.180     0.097  0.537 0.711
+sdnn                0.892     0.459  0.515 0.735
+rmssd               0.968     0.513  0.529 0.720
+pnn50               0.243     0.126  0.518 0.732
+cv_nn               0.053     0.034  0.638 0.593
+lf                  2.091     0.949  0.454 0.794
+hf                  1.939     0.989  0.510 0.740
+lf_hf               1.166     0.711  0.610 0.628
+sd1                 0.968     0.513  0.529 0.720
+sd2                 0.905     0.462  0.511 0.739
+frac_ektopik        0.045     0.031  0.688 0.527
+  panjang vektor searah_k: skala gabungan 1.00 SD gabungan; searah_w = arah sama dalam SD dalam-rekaman, panjang dalam SD gabungan 0.58
+  panjang vektor tegak_k: skala gabungan 1.00 SD gabungan; tegak_w = arah sama dalam SD dalam-rekaman, panjang dalam SD gabungan 0.58

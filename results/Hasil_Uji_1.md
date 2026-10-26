@@ -441,3 +441,145 @@ berpasangan): dalam-pasien − horizon = +0,46 [+0,33; +0,59] (HRV searah 1 SD),
 **Peluruhan lambat** (e^(−t/180 menit); `keluaran/lambat.log`, `keluaran/lambat.csv`; ambang nol dari simulasi
 nol yang ada): horizon 0,25 / 0,28 (HRV 1 / 2 SD), 0,24 (denyut +20); dalam-pasien 0,83 / 0,99 / 0,64.
 Keunggulan uji dalam-pasien tidak bergantung pada peluruhan cepat.
+
+## Paket B sesudah telaah panel 25 Oktober 2026 (`14_paket_b.py`, `keluaran/b.log`, `keluaran/b_daya.csv`)
+
+Menjawab M1/X9/DA-X3 (statistik simulasi beda dari data nyata), M2 (ambang dari 100 simulasi nol, ukuran
+diperiksa pada simulasi yang sama), DA-X2 (langit-langit AUC lawan nsrdb). Regresi logistik; 12 pasien kohort
+tetap diambil ulang untuk kedua uji; nsrdb dan chfdb diambil ulang. Ambang dari **1.000 simulasi nol**; ukuran
+diperiksa pada **500 simulasi nol segar** (benih lain); 200 simulasi per sel; selang 95 % dari bootstrap
+simulasi nol dan simulasi sel bersama (ketidakpastian ambang ikut). Satu dari 1.500 simulasi nol (benih 5665)
+hanya punya 4 pasien berbeda, jadi CV-nya 4 lipatan.
+
+**Daya (dua sisi kecuali disebut), persen simulasi:**
+
+| Perubahan pra-VF | Horizon lawan nsrdb | Horizon berpasangan lawan nsrdb | Horizon lawan chfdb | Dalam-pasien AUC jendela | Dalam-pasien AUC jendela, satu sisi | Dalam-pasien rerata selisih |
+|---|---|---|---|---|---|---|
+| Ukuran pada nol segar | 4,2 | 6,0 | 5,6 | 4,6 | 4,4 | 5,4 |
+| HRV searah 1 SD | 19 [13, 25] | 30 [20, 47] | 14 [6, 22] | 56 [45, 71] | 74 [67, 83] | 66 [54, 75] |
+| HRV searah 2 SD | 24 [18, 33] | 61 [52, 71] | 21 [15, 34] | 96 [92, 98] | 97 [94, 99] | 98 [95, 99] |
+| HRV tegak 1 SD | 18 [12, 23] | 10 [6, 17] | 14 [7, 19] | 90 [84, 95] | 95 [92, 97] | 93 [86, 96] |
+| Denyut +10 | 3 [1, 6] | 5 [2, 9] | 8 [4, 12] | 17 [12, 24] | 22 [17, 30] | 17 [12, 24] |
+| Denyut +20 | 7 [3, 12] | 7 [3, 13] | 10 [6, 14] | 53 [45, 68] | 71 [64, 79] | 61 [52, 72] |
+| Ektopi ×2 | 6 [3, 10] | 7 [3, 10] | 7 [4, 13] | 12 [7, 23] | 26 [20, 34] | 16 [9, 23] |
+| Ektopi ×4 | 6 [3, 10] | 7 [2, 10] | 9 [3, 14] | 38 [26, 49] | 53 [44, 63] | 45 [35, 55] |
+| Ektopi ×0,5 | 6 [3, 9] | 4 [1, 8] | 6 [2, 10] | 10 [6, 14] | 4 [1, 7] | 10 [6, 15] |
+| Ektopi ×0,25 | 7 [3, 10] | 4 [1, 8] | 7 [2, 11] | 10 [6, 15] | 10 [5, 14] | 10 [6, 15] |
+
+**Rasio daya** AUC jendela dalam-pasien (dua sisi) terhadap horizon, bootstrap berpasangan atas simulasi:
+lawan nsrdb HRV 3,0 [2,1; 4,7] (searah 1 SD), 4,0 [3,0; 5,3] (2 SD), 5,0 [3,8; 7,5] (tegak 1 SD); denyut
++20 8,2 [4,6; 21,8]; ektopi ×4 6,3 [3,4; 13,8]. Lawan chfdb HRV 4,2 [2,5; 9,3], 4,5 [2,8; 6,7], 6,6
+[4,7; 10,9]; denyut +20 5,6 [3,8; 10,6]. Selisih HRV lawan nsrdb +0,37 [+0,25; +0,54], +0,72 [+0,63; +0,78],
++0,72 [+0,64; +0,79].
+
+Bacaan:
+- **Klaim utama bertahan dengan statistik data nyata.** AUC jendela dalam-pasien menangkap perubahan HRV 1–2 SD
+  3 sampai 5 kali lebih sering daripada uji horizon lawan nsrdb (sebelumnya 2,6–3,7 dengan rerata selisih).
+- **Bukan efek langit-langit.** Lawan chfdb (AUC tidak di langit-langit) uji horizon malah lebih lemah (14–21 %
+  untuk HRV), jadi rasionya lebih besar, bukan lebih kecil.
+- **Horizon berpasangan** (rerata per pasien skor 0 jam − skor 6 jam) lebih peka untuk perubahan searah 2 SD
+  (61 %), tetapi tidak untuk arah tegak lurus (10 %) atau denyut (7 %).
+- AUC jendela dalam-pasien di bawah nol rata-rata 0,43, bukan 0,5: bias CV kelompok pada kohort berduplikat.
+  Karena itu ambang disesuaikan ukuran, dan uji permutasi di dalam simulasi diperiksa terpisah (di bawah).
+- Ambang dari 1.000 simulasi nol, diperiksa pada nol segar: ukuran 4,2–6,0 %, jadi aturan keputusan
+  terkalibrasi.
+
+**Uji permutasi di dalam simulasi** (99 permutasi, latih ulang, tolak bila p ≤ 0,05; `keluaran/b_permsim.csv`):
+nol segar 7,5 % (200 simulasi; selang binomial kira-kira 4–12 %), HRV searah 1 SD 86 %, 2 SD 99 % (100
+simulasi masing-masing), denyut +20 72 % (100 simulasi; AUC rerata 0,624). Uji permutasi yang dipakai pada
+data nyata jadi terkalibrasi kira-kira dan punya daya yang sama dengan ambang disesuaikan ukuran.
+
+**Koreksi kelipatan** (`keluaran/b_holm.log`; keluarga 10 uji dalam-pasien eksploratif dari Tabel 6, p dan
+baris log sumber di `keluaran/b_keluarga_p.csv`): sesudah Holm tidak ada yang < 0,05 (terkecil RF permutasi
+0,100 dan RF tanpa ektopi Wilcoxon 0,126); sesudah Benjamini-Hochberg terkecil 0,070.
+
+**RF latih ulang, horizon lawan nsrdb** (`keluaran/b_refit.csv`; kohort tetap 12 pasien, 500 undian
+bootstrap, model dilatih ulang tiap undian, benih 600+k): AUC(0 jam) − AUC(6 jam) rerata +0,114 (median
++0,097), selang 95 % [+0,000; +0,343],
+galat baku Monte Carlo batas bawah 0,002, 9,0 % undian ≤ 0. Selang lama yang "tidak memuat nol" (model tidak
+dilatih ulang) tidak bertahan: batas bawahnya tepat di nol.
+
+**Kontrol pergeseran, pasien sama** (`keluaran/b_geser_*.csv`; 15 dari 19 pasien sddb dengan rekaman
+≥ 240 menit; geometri bergeser m..m+30 menit lawan ≥ m+120 menit, 200 undian, 10 ulangan CV untuk kontras
+teramati dan tiap undian; benih rng 23):
+
+| Model | Teramati (sd antarulangan CV; galat baku MC) | Undian pergeseran, rerata [95 %] | Pasien per undian | p |
+|---|---|---|---|---|
+| RF (uji primer) | 0,565 (0,027; 0,009) | 0,512 [0,395; 0,629] | 13–15 | 0,189 |
+| Logistik | 0,423 (0,044; 0,014) | 0,501 [0,369; 0,619] | 13–15 | 0,886 |
+
+Bacaan:
+- **Uji primer tidak menolak.** Kontras dalam-pasien RF 0,565 berada di dalam sebaran kontras jendela yang
+  sekadar bergeser waktu pada pasien yang sama (p 0,189). Pada data sddb ini sinyal pra-VF tidak dapat
+  dibedakan dari pergeseran fisiologis biasa sepanjang rekaman.
+- Kontrol lama (pasien berbeda, p RF 0,065) lebih longgar; dengan pasien sama p naik ke 0,189, jadi sebagian
+  "sinyal" lama datang dari perbedaan susunan pasien.
+- Logistik di bawah pergeseran (0,423), sejalan dengan bias CV kelompok yang terlihat di simulasi nol.
+- Konsekuensi untuk naskah: klaim data nyata menjadi **tidak ada sinyal yang dapat dibedakan dari
+  pergeseran**; sumbangan naskah bertumpu pada analisis daya (uji horizon 3–5 kali kurang peka), bukan pada
+  temuan pra-VF di sddb. Uji kontrol pergeseran ini diberi nama uji primer dan berada di luar keluarga Holm.
+
+Catatan proses: sesudah peringatan memori dengan 20 pekerja, proses pertama ternyata tidak mati, sehingga
+`permsim`/`refit`/`geser` berjalan dua kali bersamaan dan menulis ke `b.log` yang sama. Benihnya identik dan
+kedua salinan memberi angka sama persis (RF geser 0,565, p 0,189 di keduanya); `b_permsim.csv` berisi tepat
+500 baris.
+
+## Paket D sesudah telaah panel 26 Oktober 2026 (`15_paket_d.py`, `keluaran/d.log`, `keluaran/d_ragam.csv`, `keluaran/d_daya_w.csv`, `keluaran/d_primer.csv`)
+
+Dua keberatan panel: (1) skala SD gabungan tiga basis data membuat uji dalam-pasien tampak unggul, karena
+perubahan sebesar itu besar dibanding ragam di dalam satu rekaman; (2) daya uji primer tidak dilaporkan.
+
+**Dekomposisi ragam** (`d_ragam.csv`, semua jendela tiga basis data): SD dalam-rekaman 0,45–0,69 kali SD
+gabungan per ciri; bagian antarrekaman (ICC) 0,53–0,79. Vektor arah yang sama diskalakan ke SD dalam-rekaman
+panjangnya 0,58 SD gabungan, jadi 1 SD dalam ≈ 0,58 SD gabungan.
+
+**Daya dengan perubahan dalam SD dalam-rekaman** (`d_daya_w.csv`; 12 pasien kohort tetap, 200 simulasi per
+sel, ambang dari 1.000 simulasi nol `b_daya.csv`, ukuran pada 500 nol segar):
+
+| Uji | Ukuran | Searah 1 SD dalam | Searah 2 | Searah 4 | Tegak 2 |
+|---|---|---|---|---|---|
+| Horizon lawan nsrdb | 0,042 | 0,09 [0,04; 0,14] | 0,20 [0,13; 0,27] | 0,25 [0,18; 0,32] | 0,18 [0,12; 0,24] |
+| Horizon lawan chfdb | 0,056 | 0,11 [0,04; 0,15] | 0,17 [0,08; 0,24] | 0,24 [0,15; 0,36] | 0,14 [0,08; 0,20] |
+| Horizon berpasangan lawan nsrdb | 0,060 | 0,13 [0,07; 0,20] | 0,39 [0,26; 0,49] | 0,64 [0,56; 0,74] | 0,10 [0,06; 0,17] |
+| AUC jendela dalam-pasien | 0,046 | 0,14 [0,07; 0,26] | 0,73 [0,60; 0,84] | 0,96 [0,94; 0,99] | 0,90 [0,85; 0,95] |
+
+Rasio daya dalam-pasien terhadap horizon (bootstrap berpasangan, ambang ikut diundi): lawan nsrdb 1,7
+[0,7; 4,5] pada 1 SD dalam (selisih +0,06 [−0,03; +0,18]), 3,8 [2,6; 5,6] pada 2, 3,9 [3,0; 5,1] pada 4,
+4,9 [3,7; 7,7] tegak 2; lawan chfdb 1,3 [0,7; 3,7], 4,5 [2,8; 9,3], 3,9 [2,6; 6,6], 6,7 [4,5; 11,0].
+
+**Daya bersyarat uji primer** (`d_primer.csv`; 15 pasien nyata, RF, 10 ulangan CV; tiap sel 100 kontras
+teramati dengan suntikan sendiri-sendiri, benih 7000+k, dan 100 undian pergeseran dengan suntikan sendiri,
+benih 8000+k; tolak bila teramati > persentil 95 undian pergeseran sel itu):
+
+| Perubahan | Teramati rerata | Pergeseran rerata (P95) | Daya [95 %] | p rerata |
+|---|---|---|---|---|
+| Nol (data nyata) | 0,565 | 0,512 (0,622) | — | 0,198 |
+| Searah 0,5 SD gabungan | 0,600 | 0,528 (0,607) | 0,35 [0,03; 0,55] | 0,127 |
+| Searah 1 SD gabungan | 0,687 | 0,528 (0,608) | 1,00 [0,89; 1,00] | 0,015 |
+| Searah 2 SD gabungan | 0,812 | 0,529 (0,611) | 1,00 [1,00; 1,00] | 0,010 |
+| Searah 2 SD dalam | 0,718 | 0,528 (0,607) | 1,00 [0,98; 1,00] | 0,011 |
+| Searah 4 SD dalam | 0,835 | 0,529 (0,613) | 1,00 [1,00; 1,00] | 0,010 |
+| Denyut +10/menit | 0,523 | 0,527 (0,603) | 0,00 [0,00; 0,00] | 0,566 |
+| Denyut +20/menit | 0,600 | 0,527 (0,602) | 0,43 [0,13; 0,55] | 0,175 |
+
+Bacaan:
+- **Keberatan skala sebagian benar.** Pada 1 SD dalam-rekaman kedua uji lemah dan rasionya tidak berbeda dari
+  1. Keunggulan 3,8–6,7 kali muncul mulai 2 SD dalam-rekaman (≈ 1,16 SD gabungan). Klaim di naskah harus
+  dibatasi: kesenjangan berlaku untuk perubahan sekitar dua SD dalam-pasien atau lebih, bukan untuk yang kecil.
+  Horizon berpasangan mencapai 0,64 pada 4 SD dalam, jadi uji horizon versi berpasangan tidak buta sama sekali
+  untuk perubahan besar searah.
+- **Uji primer bertenaga untuk perubahan HRV sedang.** Pada 15 pasien nyata, perubahan searah ≥ 1 SD gabungan
+  (≈ 1,7 SD dalam) atau ≥ 2 SD dalam selalu terdeteksi; 0,5 SD gabungan 35 %; kenaikan denyut +10/menit
+  tidak, +20/menit 43 %. Jadi p 0,189 pada data nyata menyingkirkan perubahan HRV searah sebesar ≥ 1 SD
+  gabungan dengan peluruhan 60 menit, tetapi tidak menyingkirkan perubahan setengahnya atau perubahan denyut
+  saja.
+- Sel nol mereproduksi data nyata (teramati 0,565; p 0,198 dengan 100 undian, 0,189 dengan 200 undian).
+- Daya bersyarat uji primer (1,00 pada 2 SD dalam) lebih tinggi daripada AUC jendela di simulasi kohort
+  (0,73) karena rancangannya lain: 15 pasien nyata dengan RF dan 10 ulangan CV, ambang dari pergeseran pasien
+  yang sama, bukan 12 pasien dengan ambang dari simulasi nol. Keduanya tidak dibandingkan langsung.
+- Batas: daya bersyarat pada pasien yang ada, bukan pada populasi; bentuk efek hanya peluruhan eksponensial
+  60 menit dengan pengali per pasien N(1; 0,5).
+
+Catatan proses: tugas latar dihentikan Claude Code karena memori rendah setelah sekitar 1.200 dari 1.501
+simulasi tercatat di log, tetapi `d_primer.csv` ternyata berisi 1.501 baris lengkap; hanya ringkasan yang
+belum tertulis. Ringkasan dijalankan terpisah (`15_paket_d.py ringkas_primer`) dan ditambahkan ke `d.log`.

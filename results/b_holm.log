@@ -1,0 +1,13 @@
+
+== Koreksi kelipatan, keluarga uji dalam-pasien
+                                              uji     p                                sumber  holm    bh
+               logistik permutasi jendela (N=199) 0.075      daya_ulang_permutasi.log baris 3 0.455 0.150
+                     rf permutasi jendela (N=999) 0.010 daya_bootstrap_permutasi.log baris 11 0.100 0.070
+                    logistik Wilcoxon berpasangan 0.441             revisi_panel.log baris 55 1.000 0.551
+                          rf Wilcoxon berpasangan 0.036             revisi_panel.log baris 57 0.288 0.120
+                               logistik uji tanda 0.648             revisi_panel.log baris 55 1.000 0.651
+                                     rf uji tanda 0.167             revisi_panel.log baris 57 0.835 0.249
+             rf tanpa ektopi Wilcoxon berpasangan 0.014             revisi_panel.log baris 58 0.126 0.070
+       logistik tanpa ektopi Wilcoxon berpasangan 0.651             revisi_panel.log baris 56 1.000 0.651
+logistik kontrol pergeseran lama (pasien berbeda) 0.174                     akhir.log (geser) 0.835 0.249
+      rf kontrol pergeseran lama (pasien berbeda) 0.065                     akhir.log (geser) 0.455 0.150

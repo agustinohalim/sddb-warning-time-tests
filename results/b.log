@@ -1,0 +1,145 @@
+== Simulasi daya, statistik AUC jendela: 12 pasien kohort tetap, nsrdb 18, chfdb 15
+  200/3300 simulasi, 30 dtk
+  400/3300 simulasi, 31 dtk
+  600/3300 simulasi, 36 dtk
+== Simulasi daya, statistik AUC jendela: 12 pasien kohort tetap, nsrdb 18, chfdb 15
+  200/2700 simulasi, 29 dtk
+  400/2700 simulasi, 17 dtk
+  600/2700 simulasi, 17 dtk
+  800/2700 simulasi, 16 dtk
+  1000/2700 simulasi, 15 dtk
+  1200/2700 simulasi, 15 dtk
+  1400/2700 simulasi, 15 dtk
+  1600/2700 simulasi, 16 dtk
+  1800/2700 simulasi, 15 dtk
+  2000/2700 simulasi, 15 dtk
+  2200/2700 simulasi, 15 dtk
+  2400/2700 simulasi, 15 dtk
+  2600/2700 simulasi, 15 dtk
+  2700/2700 simulasi, 8 dtk
+
+== Ringkasan daya: ambang dari 1000 simulasi nol, ukuran diperiksa pada 500 simulasi nol segar; selang 95 % dari bootstrap simulasi nol dan simulasi sel bersama (1.000 undian)
+
+  horizon lawan nsrdb [h_nsr]: nol rerata -0.004 sd 0.073; ambang (-0.181, +0.130); ukuran pada nol segar 0.042
+    searah_k     1 n=200: rerata +0.070, daya 0.19 [0.13, 0.25]
+    searah_k     2 n=200: rerata +0.093, daya 0.24 [0.18, 0.33]
+    tegak_k      1 n=200: rerata +0.059, daya 0.18 [0.12, 0.23]
+    nadi        10 n=200: rerata +0.011, daya 0.03 [0.01, 0.06]
+    nadi        20 n=200: rerata +0.038, daya 0.07 [0.03, 0.12]
+    ektopi       2 n=200: rerata -0.004, daya 0.06 [0.03, 0.10]
+    ektopi       4 n=200: rerata -0.002, daya 0.06 [0.03, 0.10]
+    ektopi     0.5 n=200: rerata -0.006, daya 0.06 [0.03, 0.09]
+    ektopi    0.25 n=200: rerata -0.005, daya 0.07 [0.03, 0.10]
+
+  horizon berpasangan lawan nsrdb [hp_nsr]: nol rerata +0.015 sd 0.075; ambang (-0.139, +0.159); ukuran pada nol segar 0.060
+    searah_k     1 n=200: rerata +0.120, daya 0.30 [0.20, 0.47]
+    searah_k     2 n=200: rerata +0.177, daya 0.61 [0.52, 0.71]
+    tegak_k      1 n=200: rerata +0.063, daya 0.10 [0.06, 0.17]
+    nadi        10 n=200: rerata +0.027, daya 0.05 [0.02, 0.09]
+    nadi        20 n=200: rerata +0.061, daya 0.07 [0.03, 0.13]
+    ektopi       2 n=200: rerata +0.014, daya 0.07 [0.03, 0.10]
+    ektopi       4 n=200: rerata +0.013, daya 0.07 [0.02, 0.10]
+    ektopi     0.5 n=200: rerata +0.012, daya 0.04 [0.01, 0.08]
+    ektopi    0.25 n=200: rerata +0.006, daya 0.04 [0.01, 0.08]
+
+  horizon lawan chfdb [h_chf]: nol rerata +0.065 sd 0.106; ambang (-0.128, +0.289); ukuran pada nol segar 0.056
+    searah_k     1 n=200: rerata +0.166, daya 0.14 [0.06, 0.22]
+    searah_k     2 n=200: rerata +0.211, daya 0.21 [0.15, 0.34]
+    tegak_k      1 n=200: rerata +0.102, daya 0.14 [0.07, 0.19]
+    nadi        10 n=200: rerata +0.024, daya 0.08 [0.04, 0.12]
+    nadi        20 n=200: rerata +0.035, daya 0.10 [0.06, 0.14]
+    ektopi       2 n=200: rerata +0.061, daya 0.07 [0.04, 0.13]
+    ektopi       4 n=200: rerata +0.074, daya 0.09 [0.03, 0.14]
+    ektopi     0.5 n=200: rerata +0.075, daya 0.06 [0.02, 0.10]
+    ektopi    0.25 n=200: rerata +0.089, daya 0.07 [0.02, 0.11]
+
+  dalam-pasien rerata selisih [d_sel]: nol rerata -0.050 sd 0.073; ambang (-0.181, +0.105); ukuran pada nol segar 0.054
+    searah_k     1 n=200: rerata +0.140, daya 0.66 [0.54, 0.75]
+    searah_k     2 n=200: rerata +0.352, daya 0.98 [0.95, 0.99]
+    tegak_k      1 n=200: rerata +0.277, daya 0.93 [0.86, 0.96]
+    nadi        10 n=200: rerata -0.005, daya 0.17 [0.12, 0.24]
+    nadi        20 n=200: rerata +0.137, daya 0.61 [0.52, 0.72]
+    ektopi       2 n=200: rerata +0.020, daya 0.16 [0.09, 0.23]
+    ektopi       4 n=200: rerata +0.100, daya 0.45 [0.35, 0.55]
+    ektopi     0.5 n=200: rerata -0.067, daya 0.10 [0.06, 0.15]
+    ektopi    0.25 n=200: rerata -0.043, daya 0.10 [0.06, 0.15]
+
+  dalam-pasien AUC jendela, dua sisi [d_auc]: nol rerata +0.429 sd 0.094; ambang (+0.261, +0.622); ukuran pada nol segar 0.046
+    searah_k     1 n=200: rerata +0.632, daya 0.56 [0.45, 0.71]
+    searah_k     2 n=200: rerata +0.779, daya 0.96 [0.92, 0.98]
+    tegak_k      1 n=200: rerata +0.763, daya 0.90 [0.84, 0.95]
+    nadi        10 n=200: rerata +0.500, daya 0.17 [0.12, 0.24]
+    nadi        20 n=200: rerata +0.633, daya 0.53 [0.45, 0.68]
+    ektopi       2 n=200: rerata +0.513, daya 0.12 [0.07, 0.23]
+    ektopi       4 n=200: rerata +0.590, daya 0.38 [0.26, 0.49]
+    ektopi     0.5 n=200: rerata +0.407, daya 0.10 [0.06, 0.14]
+    ektopi    0.25 n=200: rerata +0.439, daya 0.10 [0.06, 0.15]
+
+  dalam-pasien AUC jendela, satu sisi [d_auc]: nol rerata +0.429 sd 0.094; ambang (-inf, +0.587); ukuran pada nol segar 0.044
+    searah_k     1 n=200: rerata +0.632, daya 0.74 [0.67, 0.83]
+    searah_k     2 n=200: rerata +0.779, daya 0.97 [0.94, 0.99]
+    tegak_k      1 n=200: rerata +0.763, daya 0.95 [0.92, 0.97]
+    nadi        10 n=200: rerata +0.500, daya 0.22 [0.17, 0.30]
+    nadi        20 n=200: rerata +0.633, daya 0.71 [0.64, 0.79]
+    ektopi       2 n=200: rerata +0.513, daya 0.26 [0.20, 0.34]
+    ektopi       4 n=200: rerata +0.590, daya 0.53 [0.44, 0.63]
+    ektopi     0.5 n=200: rerata +0.407, daya 0.04 [0.01, 0.07]
+    ektopi    0.25 n=200: rerata +0.439, daya 0.10 [0.05, 0.14]
+
+  selisih dan rasio daya, AUC jendela dalam-pasien dua sisi terhadap horizon (bootstrap berpasangan atas simulasi, ambang ikut diundi):
+    h_nsr searah_k     1: selisih +0.37 [+0.25, +0.54], rasio 3.0 [2.1, 4.7]
+    h_nsr searah_k     2: selisih +0.72 [+0.63, +0.78], rasio 4.0 [3.0, 5.3]
+    h_nsr tegak_k      1: selisih +0.72 [+0.64, +0.79], rasio 5.0 [3.8, 7.5]
+    h_nsr nadi        10: selisih +0.15 [+0.08, +0.21], rasio 7.0 [2.6, 32.0]
+    h_nsr nadi        20: selisih +0.47 [+0.38, +0.62], rasio 8.2 [4.6, 21.8]
+    h_nsr ektopi       2: selisih +0.07 [-0.01, +0.16], rasio 2.2 [0.9, 5.5]
+    h_nsr ektopi       4: selisih +0.32 [+0.19, +0.45], rasio 6.3 [3.4, 13.8]
+    h_nsr ektopi     0.5: selisih +0.04 [-0.01, +0.10], rasio 1.7 [0.8, 4.7]
+    h_nsr ektopi    0.25: selisih +0.04 [-0.02, +0.11], rasio 1.5 [0.8, 4.2]
+    h_chf searah_k     1: selisih +0.43 [+0.29, +0.59], rasio 4.2 [2.5, 9.3]
+    h_chf searah_k     2: selisih +0.74 [+0.61, +0.82], rasio 4.5 [2.8, 6.7]
+    h_chf tegak_k      1: selisih +0.76 [+0.69, +0.84], rasio 6.6 [4.7, 10.9]
+    h_chf nadi        10: selisih +0.09 [+0.02, +0.18], rasio 2.2 [1.2, 4.4]
+    h_chf nadi        20: selisih +0.44 [+0.34, +0.60], rasio 5.6 [3.8, 10.6]
+    h_chf ektopi       2: selisih +0.05 [-0.03, +0.16], rasio 1.7 [0.7, 4.4]
+    h_chf ektopi       4: selisih +0.29 [+0.17, +0.43], rasio 4.5 [2.4, 14.8]
+    h_chf ektopi     0.5: selisih +0.04 [-0.01, +0.10], rasio 1.7 [0.8, 5.0]
+    h_chf ektopi    0.25: selisih +0.04 [-0.02, +0.11], rasio 1.5 [0.8, 4.8]
+
+== Uji permutasi dalam-pasien di dalam simulasi (99 permutasi, latih ulang)
+  200/500 simulasi, 145 dtk
+  400/500 simulasi, 145 dtk
+  500/500 simulasi, 101 dtk
+  segar        0 n=200: tolak p <= 0,05 pada 0.07; AUC rerata 0.435
+  searah_k     1 n=100: tolak p <= 0,05 pada 0.86; AUC rerata 0.638
+  searah_k     2 n=100: tolak p <= 0,05 pada 0.99; AUC rerata 0.785
+  nadi        20 n=100: tolak p <= 0,05 pada 0.72; AUC rerata 0.624
+
+== RF lawan nsrdb, kohort tetap 12 pasien, 500 undian latih ulang: AUC(0) - AUC(6 jam) selang [+0.000, +0.343]; galat baku batas bawah 0.002; bagian undian <= 0 0.090; 408 dtk
+
+== Kontrol pergeseran, pasien sama (15 dari 19), 10 ulangan CV untuk kontras teramati dan tiap undian
+    ... logistik 50 undian, 43 dtk
+    ... logistik 100 undian, 79 dtk
+    ... logistik 150 undian, 114 dtk
+    ... logistik 200 undian, 150 dtk
+  logistik: teramati 0.423 (sd antarulangan CV 0.044, galat baku Monte Carlo 0.014); pergeseran rerata 0.501 [0.369, 0.619], pasien per undian 13-15; p 0.886; 150 dtk
+    ... rf 50 undian, 2049 dtk
+    ... rf 100 undian, 4311 dtk
+    ... rf 150 undian, 6262 dtk
+    ... rf 200 undian, 8536 dtk
+  rf      : teramati 0.565 (sd antarulangan CV 0.027, galat baku Monte Carlo 0.009); pergeseran rerata 0.512 [0.395, 0.629], pasien per undian 13-15; p 0.189; 8536 dtk
+20 n=100: tolak p <= 0,05 pada 0.72; AUC rerata 0.624
+
+== RF lawan nsrdb, kohort tetap 12 pasien, 500 undian latih ulang: AUC(0) - AUC(6 jam) selang [+0.000, +0.343]; galat baku batas bawah 0.002; bagian undian <= 0 0.090; 370 dtk
+
+== Kontrol pergeseran, pasien sama (15 dari 19), 10 ulangan CV untuk kontras teramati dan tiap undian
+    ... logistik 50 undian, 34 dtk
+    ... logistik 100 undian, 67 dtk
+    ... logistik 150 undian, 100 dtk
+    ... logistik 200 undian, 133 dtk
+  logistik: teramati 0.423 (sd antarulangan CV 0.044, galat baku Monte Carlo 0.014); pergeseran rerata 0.501 [0.369, 0.619], pasien per undian 13-15; p 0.886; 133 dtk
+    ... rf 50 undian, 2039 dtk
+    ... rf 100 undian, 4006 dtk
+    ... rf 150 undian, 6230 dtk
+    ... rf 200 undian, 8569 dtk
+  rf      : teramati 0.565 (sd antarulangan CV 0.027, galat baku Monte Carlo 0.009); pergeseran rerata 0.512 [0.395, 0.629], pasien per undian 13-15; p 0.189; 8569 dtk

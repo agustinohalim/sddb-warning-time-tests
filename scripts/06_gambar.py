@@ -1,16 +1,17 @@
-"""Artikel EKG 1 — gambar 1, tiga panel.
+"""Artikel EKG 1 — gambar 1, tiga panel (urutan sesudah paket D, 26 Okt 2026: daya lebih dulu).
 
-A  AUC terhadap horizon sebelum VF (regresi logistik, pembagian tingkat subjek, selang bootstrap
+A  Simulasi daya (14_paket_b.py b_daya.csv dan 15_paket_d.py d_daya_w.csv, regresi logistik): persen
+   simulasi yang menangkap perubahan pra-VF buatan (disesuaikan ukuran, dua sisi, ambang dari 1.000
+   simulasi nol b_daya.csv), AUC jendela dalam-pasien lawan uji horizon terhadap nsrdb dan chfdb pada 12
+   pasien yang sama; perubahan HRV dalam SD dalam-rekaman lebih dulu, lalu SD gabungan; garis putus 5 %.
+B  AUC terhadap horizon sebelum VF (regresi logistik, pembagian tingkat subjek, selang bootstrap
    subjek): SCD lawan nsrdb (semua ciri), lawan chfdb (semua ciri), dan lawan nsrdb dengan
    proporsi denyut ektopik saja. Sumbu mendatar berjarak sama per horizon, bukan skala jam.
-B  Kontras dalam-pasien: jendela dekat VF lawan jendela pasien yang sama jauh sebelumnya, untuk
+C  Kontras dalam-pasien: jendela dekat VF lawan jendela pasien yang sama jauh sebelumnya, untuk
    regresi logistik dan random forest, dengan selang 95 % (hasil_dalam_pasien.csv untuk
    0-30 menit lawan >= 2, 3, 6 jam; revisi_panel.log untuk pita 10 menit lawan >= 2 jam). Pita abu-abu:
-   rentang 95 % AUC kontrol pergeseran sepadan RF (akhir_geser_rf.csv, 200 undian).
-C  Simulasi daya kohort bootstrap (11_daya_bootstrap.py, daya_bootstrap.csv, regresi logistik):
-   persen simulasi yang menangkap perubahan pra-VF buatan (disesuaikan ukuran, dua sisi, ambang dari
-   100 simulasi tanpa suntikan), uji horizon lawan nsrdb dan uji dalam-pasien pada 12 pasien yang sama
-   (akhir_dalam12.csv dari 12_analisis_akhir.py); garis putus-putus 5 %.
+   rentang 95 % AUC kontrol pergeseran RF pada pasien yang sama (b_geser_rf.csv dari 14_paket_b.py,
+   200 undian).
 
 Palet: biru, jingga, hijau-toska dari palet kategoris baku; setiap garis diberi label langsung
 dan penanda berbeda bentuk karena hijau-toska di bawah kontras 3:1.
@@ -76,7 +77,7 @@ def panel_horizon(ax):
     ax.set_ylim(0.3, 1.02)
     ax.set_xlim(-0.3, len(n) - 0.7)
     rapikan(ax)
-    huruf(ax, 'A')
+    huruf(ax, 'B')
 
 
 def panel_dalam(ax):
@@ -100,7 +101,7 @@ def panel_dalam(ax):
                     color=warna, markersize=6, markeredgecolor=PERMUKAAN, elinewidth=1.4, capsize=0,
                     label=nama, zorder=3)
     ax.axhline(0.5, color=TEKS2, linewidth=1, linestyle=(0, (4, 3)))
-    gs_ = pd.read_csv(os.path.join(OUT, 'akhir_geser_rf.csv')).auc
+    gs_ = pd.read_csv(os.path.join(OUT, 'b_geser_rf.csv')).auc
     ax.axhspan(gs_.quantile(0.025), gs_.quantile(0.975), color=TEKS2, alpha=0.10, linewidth=0, zorder=0)
     ax.text(-0.4, 0.34, 'shaded: drift control, 95 % range (random forest)', ha='left',
             va='center', fontsize=7, color=TEKS2)
@@ -111,28 +112,28 @@ def panel_dalam(ax):
     ax.set_xlabel('Near windows (min before VF) vs far windows', fontsize=9, color=TEKS)
     ax.legend(frameon=False, fontsize=8, loc='upper left', labelcolor=TEKS)
     rapikan(ax)
-    huruf(ax, 'B')
+    huruf(ax, 'C')
 
 
 def panel_daya(ax):
-    h = pd.read_csv(os.path.join(OUT, 'daya_bootstrap.csv'))
-    d12 = pd.read_csv(os.path.join(OUT, 'akhir_dalam12.csv'))
+    h = pd.concat([pd.read_csv(os.path.join(OUT, 'b_daya.csv')), pd.read_csv(os.path.join(OUT, 'd_daya_w.csv'))])
     n = h[h.jenis == 'nol']
-    lo, hi = n.h_sel.quantile([0.025, 0.975])
-    lo12, hi12 = d12[d12.jenis == 'nol'].d12.quantile([0.025, 0.975])
-    sel = [('searah_k', 1.0, 'HRV 1 SD'), ('searah_k', 2.0, 'HRV 2 SD'), ('tegak_k', 1.0, 'HRV 1 SD, orth.'),
-           ('nadi', 10, 'HR +10/min'), ('nadi', 20, 'HR +20/min'), ('ektopi', 2.0, 'ectopy ×2'),
-           ('ektopi', 4.0, 'ectopy ×4'), ('ektopi', 0.5, 'ectopy ×0.5')]
-    hor, dal, lab = [], [], []
+    ambang = {c: n[c].quantile([0.025, 0.975]).to_numpy() for c in ('d_auc', 'h_nsr', 'h_chf')}
+    sel = [('searah_w', 1.0, 'HRV 1 SD within'), ('searah_w', 2.0, 'HRV 2 SD within'),
+           ('searah_w', 4.0, 'HRV 4 SD within'), ('tegak_w', 2.0, 'HRV 2 SD within,\northogonal'),
+           ('searah_k', 1.0, 'HRV 1 SD pooled'), ('searah_k', 2.0, 'HRV 2 SD pooled'),
+           ('nadi', 20, 'HR +20/min'), ('ektopi', 4.0, 'ectopy ×4')]
+    daya = {c: [] for c in ambang}
+    lab = []
     for j, b_, l in sel:
         g = h[(h.jenis == j) & (h.besar == b_)]
-        hor.append(((g.h_sel < lo) | (g.h_sel > hi)).mean() * 100)
-        g2 = d12[(d12.jenis == j) & (d12.besar == b_)]
-        dal.append(((g2.d12 < lo12) | (g2.d12 > hi12)).mean() * 100)
+        for c, (lo, hi) in ambang.items():
+            daya[c].append(((g[c] < lo) | (g[c] > hi)).mean() * 100)
         lab.append(l)
     yy = np.arange(len(sel))[::-1]
-    ax.barh(yy + 0.2, dal, height=0.38, color=TOSKA, label='within-patient (same 12)')
-    ax.barh(yy - 0.2, hor, height=0.38, color=BIRU, label='horizon vs nsrdb')
+    ax.barh(yy + 0.27, daya['d_auc'], height=0.26, color=TOSKA, label='within-patient AUC')
+    ax.barh(yy, daya['h_nsr'], height=0.26, color=BIRU, label='horizon vs nsrdb')
+    ax.barh(yy - 0.27, daya['h_chf'], height=0.26, color=JINGGA, label='horizon vs chfdb')
     ax.axvline(5, color=TEKS2, linewidth=1, linestyle=(0, (4, 3)))
     ax.set_yticks(yy)
     ax.set_yticklabels(lab, fontsize=7.5)
@@ -147,19 +148,19 @@ def panel_daya(ax):
     for sp in ('left', 'bottom'):
         ax.spines[sp].set_color(KISI)
     ax.tick_params(colors=TEKS2, labelsize=8)
-    huruf(ax, 'C')
+    huruf(ax, 'A')
 
 
 def main():
     os.makedirs(GAMBAR, exist_ok=True)
-    fig = plt.figure(figsize=(7.2, 7.6), facecolor=PERMUKAAN)
-    gs = fig.add_gridspec(2, 2, height_ratios=[1, 1], width_ratios=[1.55, 1], hspace=0.55, wspace=0.32)
-    panel_horizon(fig.add_subplot(gs[0, :]))
-    panel_dalam(fig.add_subplot(gs[1, 0]))
-    panel_daya(fig.add_subplot(gs[1, 1]))
-    fig.subplots_adjust(left=0.09, right=0.97, bottom=0.11, top=0.96)
-    # panel A: beri ruang label kanan dengan menyempitkan sumbu
-    ax = fig.axes[0]
+    fig = plt.figure(figsize=(7.2, 9.6), facecolor=PERMUKAAN)
+    gs = fig.add_gridspec(3, 1, height_ratios=[1.05, 1, 1], hspace=0.5)
+    panel_daya(fig.add_subplot(gs[0]))
+    panel_horizon(fig.add_subplot(gs[1]))
+    panel_dalam(fig.add_subplot(gs[2]))
+    fig.subplots_adjust(left=0.19, right=0.97, bottom=0.07, top=0.97)
+    # panel B: beri ruang label kanan dengan menyempitkan sumbu
+    ax = fig.axes[1]
     pos = ax.get_position()
     ax.set_position([pos.x0, pos.y0, pos.width * 0.66, pos.height])
     for ext in ('png', 'pdf'):
