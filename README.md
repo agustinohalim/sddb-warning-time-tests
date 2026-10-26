@@ -9,7 +9,7 @@ Code for the paper
 > in preparation.
 
 Cite this code as: Halim, A. (2026). *sddb-warning-time-tests* (version 1.1.0). Zenodo.
-https://doi.org/10.5281/zenodo.23283430 (all versions; the version DOI is on the Zenodo page).
+https://doi.org/10.5281/zenodo.23655740 (all versions: https://doi.org/10.5281/zenodo.23283430).
 
 Version 1.1.0 adds `14_paket_b.py` (power simulation with the window-level within-patient AUC and
 size-adjusted thresholds from 1,000 null simulations, permutation test inside the simulation, refitted
